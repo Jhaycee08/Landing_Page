@@ -1,9 +1,20 @@
 body {
-    background-image: url('niek2.jpg'), url('nieks.png'), url('nieksss.png');
-    background-position:top, center, bottom;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: contain, contain, contain;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
+.sec1{
+    background-image: url(niek2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section2{
+  background-image: url(nieksss.png);
+  background-position:center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .logo{
     height: 100;
     width: 100;
@@ -173,7 +184,21 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  @media screen and (max-width: 600px) {
+    .topnav a, .navbar a {
+        float: none; /* Stack links vertically */
+        display: block; /* Make links block elements */
+        text-align: left; /* Align text to the left */
+        width: 100%; /* Full width for each link */
+    }
 
+    .dropdown-content {
+        position: relative; /* Adjust position for mobile view */
+        min-width: auto; /* Remove min-width for mobile view */
+        box-shadow: none; /* Remove shadow for simplicity */
+        display: block; /* Show dropdown by default on mobile */
+    }
+}
   h1 {
     display: inline-block;
 }
